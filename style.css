@@ -1,0 +1,57 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content:space-around ;
+}
+
+.boxNav{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+#taskCount{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    margin-left: 30%;
+}
+
+h1{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+.bouton{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+.todo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#todoCards{
+    display: flex;
+    flex-direction: row ; 
+}

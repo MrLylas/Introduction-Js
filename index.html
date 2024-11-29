@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
     <title>Todo List</title>
 </head>
 <body>
+    <nav>
+        <div class="boxNav"><p id="taskCount"> Tâches restantes : 1</p></div>
+        <div class="boxNav"><h1>Liste de tâches</h1></div>
+        <div class="boxNav"><button id="btn">Ajouter une tâche</button><button id="suppr">Tout supprimer</button></div>
+    </nav>
     <div class="wrapper">
-        <h1>Liste de tâches</h1>
-
         <div class="todo">
-            <p id="taskCount">0</p>
-            <button id="btn">Ajouter une tâche</button>
-            
             <div id="todoCards">
                 <div class="todoCard">
-                    <textarea class="task" maxlength="200" cols="20" rows="15">Nouvelle tâche</textarea>
+                    <textarea class="task" maxlength="500" cols="50" rows="35">Nouvelle tâche</textarea>
                     <span class="delBtn"><i class="fa-solid fa-trash" aria-hidden="true"></i></span>
                 </div>
             </div>
         </div>
     </div>
-
     <script src="main.js"></script>
 </body>
 </html>
+        
+
+
