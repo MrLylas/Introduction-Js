@@ -1,0 +1,42 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+/********************** Conteneur des Carrés ***************************/
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+/***************************** Carrés ***********************************/
+
+.square{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background-color: rgb(136,174 ,136 );
+    color: rgb(255,255,255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman'; 
+    font-size: 40px;
+}
+
+.square:hover{
+    cursor: pointer;
+}
+
+.blue{
+    background-color: blue;
+}
+.red{
+    background-color: rgb(255, 0, 64);
+}
+.green{
+    background-color: rgb(15, 133, 11);
+}
+.yellow{
+    background-color: rgb(238, 255, 0);
+}
