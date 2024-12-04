@@ -40,34 +40,41 @@ import {quotes} from './quotes.js'
 
                 quotesContainer.appendChild(quoteBox);
 
-                
+//Implanter icone like à quotesContainer
+
+                const favButtons = document.createElement('i');
+                favButtons.classList.add('favButton');
+                favButtons.classList.add('fa-regular');
+                favButtons.classList.add('fa-heart');
+                quoteBox.appendChild(favButtons);
             }); 
+                
+                
+                
+                
+                //Si favButton est cliqué 
+                
+                const favButtons = document.querySelectorAll('.favButton');
 
-    //Bouton fav
 
-            const favButtons = document.querySelectorAll('.favBtn')
-
-    //ajout de la fonction click sur le favbutton
-
+                function like(favButton){
+                    if(favButton.classList.contains('fa-solid')){
+                        favButton.classList.replace('fa-solid','fa-regular');
+                    }else{
+                        favButton.classList.replace('fa-regular','fa-solid');
+                        
+                    }
+                }
+                
+            
+            // ajout de la fonction click sur le favbutton
+            
             favButtons.forEach(favButton => {
                 favButton.addEventListener('click',function(){
                     like(favButton);
                 });
+                
+            });
+            
 
-        });
-        
-            console.log(authorText);
-
-    //Si favButton est cliqué 
-
-            function like(favButton){
-                if(favButton.classList.contains('fa-solid')){
-                    favButton.class.replace('fa-regular','fa-regular');
-                    favButton.class.remove('favorite');
-                }else{
-                    favButton.class.replace('fa-regular','fa-regular');
-                    
-                }
-            }
-
-<i class="fa-regular fa-heart"></i>
+{/* <i class="fa-regular fa-heart"></i>  */}
