@@ -40,7 +40,7 @@ import {quotes} from './quotes.js'
 
                 quotesContainer.appendChild(quoteBox);
 
-//Implanter icone like à quotesContainer
+    //Implanter icone favoris
 
                 const favButtons = document.createElement('i');
                 favButtons.classList.add('favButton');
@@ -52,7 +52,7 @@ import {quotes} from './quotes.js'
                 
                 
                 
-                //Si favButton est cliqué 
+                //Si click sur bouton favoris 
                 
                 const favButtons = document.querySelectorAll('.favButton');
 
@@ -61,20 +61,16 @@ import {quotes} from './quotes.js'
                     if(favButton.classList.contains('fa-solid')){
                         favButton.classList.replace('fa-solid','fa-regular');
                     }else{
-                        favButton.classList.replace('fa-regular','fa-solid');
-                        
+                        favButton.classList.replace('fa-regular','fa-solid');   
                     }
                 }
                 
             
-            // ajout de la fonction click sur le favbutton
+    // ajout de la fonction click sur le favbutton
             
-            favButtons.forEach(favButton => {
-                favButton.addEventListener('click',function(){
-                    like(favButton);
+                favButtons.forEach(favButton => {
+                    favButton.addEventListener('click',function(){
+                        like(favButton);
+                    });
                 });
-                
-            });
             
-
-{/* <i class="fa-regular fa-heart"></i>  */}
