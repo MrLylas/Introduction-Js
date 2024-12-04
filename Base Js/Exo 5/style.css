@@ -1,7 +1,23 @@
 *{margin: 0;padding: 0;box-sizing: border-box;}
 
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .container{
-    max-width: 100%;
+    width: 90%;
+    height: auto;
+}
+
+.quotes{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-bottom: 2em;
 }
 
 .quotes{
