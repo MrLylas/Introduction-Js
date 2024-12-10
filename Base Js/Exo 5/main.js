@@ -1,3 +1,5 @@
+
+
 // Importer le fichier quotes
 
 import {quotes} from './quotes.js'
@@ -38,39 +40,40 @@ import {quotes} from './quotes.js'
 
     //Implanter quoteBox à quotesContainer
 
-                quotesContainer.appendChild(quoteBox);
+                        quotesContainer.appendChild(quoteBox);
+                        
+                        //Implanter icone favoris
+                        const favButton = document.createElement('i');
+                        favButton.classList.add('favButton');
+                        quoteBox.appendChild(favButton);
 
-    //Implanter icone favoris
+                        //Si Citation 
 
-                const favButtons = document.createElement('i');
-                favButtons.classList.add('favButton');
-                favButtons.classList.add('fa-regular');
-                favButtons.classList.add('fa-heart');
-                quoteBox.appendChild(favButtons);
-            }); 
-                
-                
-                
-                
-                //Si click sur bouton favoris 
-                
-                const favButtons = document.querySelectorAll('.favButton');
-
-
-                function like(favButton){
-                    if(favButton.classList.contains('fa-solid')){
-                        favButton.classList.replace('fa-solid','fa-regular');
-                    }else{
-                        favButton.classList.replace('fa-regular','fa-solid');   
-                    }
-                }
-                
-            
-    // ajout de la fonction click sur le favbutton
-            
-                favButtons.forEach(favButton => {
-                    favButton.addEventListener('click',function(){
-                        like(favButton);
+                        if(localStorage.getItem(quote["id"]) !== null){
+                            favButton.classList.add('fa-solid');
+                            favButton.classList.add('fa-heart');
+                            favButton.classList.add('active');
+                        }else{
+                            favButton.classList.add('fa-regular');
+                            favButton.classList.add('fa-heart');
+                        }
+                        
+                        favButton.addEventListener('click',function(){
+                            if (quoteBox.classList.contains('active')){
+                                favButton.classList.remove('fa-solid')
+                                favButton.classList.add('fa-regular')
+                                quoteBox.classList.remove('active')
+                                localStorage.removeItem(quote['id'])
+                            }else{
+                                favButton.classList.remove('fa-regular')
+                                favButton.classList.add('fa-solid')
+                                quoteBox.classList.add('active')
+                                localStorage.setItem(quote["id"],quote["author"] + ": " + quote["content"]);
+                            }
                     });
-                });
-            
+            }); 
+
+                
+                
+                
+                
